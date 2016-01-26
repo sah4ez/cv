@@ -4,15 +4,13 @@
 \usepackage{babel}
 \usepackage{color}
 \usepackage{hyperref}
-\usepackage{graphicx}
 \usepackage{multicol}
-
-\graphicspath{ { /home/sokol/Download/ } }
 
 %\usepackage[margin=2cm,text={19cm,25cm},centering]{geometry}
 %\usepackage[total={6.5in,8.75in},top=1.2in, left=0.9in, includefoot]{geometry}.
 
 \definecolor{titlecolor}{RGB}{0, 70, 146}
+\definecolor{subsubsectioncolor}{RGB}{51, 51, 51}
 
 \setlength{\topmargin}{-0.25in}
 \setlength{\headheight}{0in}
@@ -24,9 +22,14 @@
 \setlength{\parindent}{0.25in}
 %\setlength{\parskip}{0.25in}
 
-\titleformat{\section}{\bf\Large\center\color{titlecolor}}{\thesection}{1em}{}
+\titleformat{\section}{\bf\Large\center\color{titlecolor}}{\thesection}{0.8em}{}
+\titleformat*{\subsubsection}{\bf\large\color{subsubsectioncolor}}
 
-\pagestyle{empty}
+\titlespacing\section{0pt}{10pt plus 5pt minus 5pt}{10pt plus 5pt minus 5pt}
+\titlespacing\subsection{0pt}{5pt plus 3pt minus 3pt}{5pt plus 3pt minus 3pt}
+\titlespacing\subsubsection{0pt}{0pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+%\pagestyle{empty}
 
 \title {CV}
 \author{Sokolik Grigoriy Andreevich}
@@ -37,7 +40,7 @@
 
 
 \section* {Education}
-\subsection* {2005-2010 -- MSU, department of mechanics and mathematics}
+2005-2010 -- MSU, department of mechanics and mathematics
 %\item \href{http://php.feedme.ru/widget.php?code=puyg9l1a8qx4f3scrbtgedm5j60hzw2v}{\includegraphics{feed_me_widget}}
 
 
@@ -54,12 +57,11 @@
         \item solve daily problems
       \end{list}
     \subsubsection* {Technology \& infrostructure stack}
-      \textbf{IBM WebSphere}, \textbf{CentOS Linux}, \textbf{MySQL}, \textbf{RabbitMQ}, \textbf{Elastic},
-      \textbf{Memcached}, \textbf{PHP}, \textbf{PHP-FPM}, \textbf{Nginx}
+      IBM WebSphere, CentOS Linux, MySQL, RabbitMQ, Elastic search, Memcached,
+      PHP, PHP-FPM, Nginx
     \subsubsection* {Development \& management tools \& services}
-      \textbf{Jira}, \textbf{Confluence}, \textbf{Vagrant}, \textbf{Puppet}, \textbf{TeamCity},
-      \textbf{Capistrano}, \textbf{Composer}, \textbf{NewRelic}, \textbf{Kibana}, \textbf{Git},
-      \textbf{Github}, \textbf{Vim}, \textbf{PhpStorm}
+      Jira, Confluence, Vagrant, Puppet, TeamCity, Capistrano, Composer,
+      NewRelic, Kibana, Git, Github, Vim, PhpStorm
 
 
   \subsection* {Aplil 2015 - August 2015 -- \textbf{Badoo LTD}}
@@ -71,13 +73,12 @@
         \item Solving daily problems
       \end{list}
     \subsubsection* {Technology \& infrostructure stack}
-      \dots (NDA-protected Virtualization level) \dots\textbf{Linux}, \textbf{Mysql}, \textbf{Memcached},
-      CPQ (Cross-Platform-Queue): NDA-protected prortietary Mysql-based queue, C\/C++ daemons, \textbf{RRD},
-      \textbf{PHP}, \textbf{PHP-FPM}, \textbf{Nginx}
+      \ldots (NDA-protected Virtualization level) \ldots Linux, Mysql, Memcached,
+      CPQ (Cross-Platform-Queue): NDA-protected prortietary Mysql-based queue,
+      C/C++ daemons, RRD, PHP, PHP-FPM, Nginx
     \subsubsection* {Development \& management tools \& services}
-      \textbf{Jira}, \textbf{Confluence}, google infrostruction, \textbf{TeamCity}, \textbf{Splunk},
-      self-written tools, \textbf{Git}, \textbf{Subversion} (they really use both), \textbf{Vim},
-      \textbf{PhpStorm}
+      Jira, Confluence, google infrostruction, TeamCity, Splunk, self-written
+      tools, Git, Subversion (they really use both), Vim, PhpStorm
 
 
   \subsection* {August 2013 - March 2015 -- \textbf{LLC GENES1S INTELLECTUAL SOLUTIONS}}
@@ -91,12 +92,11 @@
         \item Participation in negotiations with clients to introduce products and discuss technical issues
       \end{list}
     \subsubsection* {Technology \& infrostructure stack}
-      \textbf{Linux}, \textbf{Mysql}, \textbf{Redis}, \textbf{Memcached}, \textbf{Python} (with NumPy\/SciPy
-      \& Pandas), \textbf{PHP}, \textbf{PHP-FPM}, \textbf{Apache/Nginx} (I've made the migration),
-      \textbf{Javascript}, \textbf{ExtJs}, \textbf{JQuery} (I've made the migtration from ExtJs)
+      Linux, Mysql, Redis, Memcached, Python (with NumPy/SciPy \& Pandas),
+      PHP, PHP-FPM, Apache/Nginx (I've made the migration), Javascript,
+      ExtJs, JQuery (I've made the migtration from ExtJs)
     \subsubsection* {Development \& management tools \& services}
-      \textbf{RedMine}, \textbf{Subversion\/Git} (I've made the migration), \textbf{Vim},
-      \textbf{PhpStorm}
+      RedMine, Subversion/Git (I've made the migration), Vim, PhpStorm
 
 
   \subsection* {May 2013 — June 2013 -- \textbf{Bradbury Lab LTD}}
@@ -121,71 +121,94 @@
         \item \textbf{\url{http://smartmarket.net}}
       \end {list}
     \subsubsection* {Technology \& infrostructure stack}
-      \textbf{Debian Linux}, \textbf{PostgreSQL}, \textbf{Memcached}, \textbf{Python}, \textbf{Django},
-      \textbf{Gevent}, \textbf{Flask}, \textbf{UWSGI}, \textbf{Nginx}
+      Debian Linux, PostgreSQL, Memcached, Python, Django, Gevent, Flask,
+      UWSGI, Nginx
     \subsubsection* {Development \& management tools \& services}
-      \begin {list}{\textbullet}{}
-        \item Jira
-        \item Confluence
-        \item Git
-        \item PyCharm
-        \item Vim
-        \item NumPy\/SciPy \& Pandas (for analytical models experiments, was not used in production)
-      \end{list}
+      Jira, Confluence, Git, PyCharm, Vim, NumPy\/SciPy \& Pandas (for
+      analytical models experiments, was not used in production)
 
 
   \subsection* {March 2012 - July 2012 -- \textbf{101XP}}
     \subsubsection* {Role}
-      Social game porting engineer
-    \begin {list}{\textbullet}{}
-      \item \textbf{Zombie Lane} -- porting social game from Facebook (\url{http://www.facebook.com}) to Hyves (\url{http://www.hyves.nl})
-      \item \textbf{Wasteland Empires} -- portingsocial game from Facebook
-        (\url{http://www.facebook.com}) to Vkontakte (\url{http://www.vk.com}) and Odnoklassinki (\url{http://www.odnoklassniki.ru})
-    \end {list}
+      Social game porting engineer. I used to localize apps, that has been
+      bought from foreign developers and integrate it with social networks.
+    \subsubsection* {Goals \& achievements}
+      \begin {list}{\textbullet}{}
+        \item \textbf{Zombie Lane} -- porting social game from Facebook
+          (\url{http://www.facebook.com}) to Hyves (\url{http://www.hyves.nl})
+        \item \textbf{Wasteland Empires} -- portingsocial game from Facebook
+          (\url{http://www.facebook.com}) to Vkontakte
+          (\url{http://www.vk.com}) and Odnoklassinki
+          (\url{http://www.odnoklassniki.ru})
+      \end {list}
+    \subsubsection* {Technology \& infrostructure stack}
+      Debian Linux, Mysql, Memcached, Java, Tomcat, CoachDB, Redis, Python,
+      Tornado, ActionScript
+    \subsubsection* {Development \& management tools \& services}
+      Redmine, google infrostucture, Subversion, Eclipse
+
 
   \subsection* {February 2011 - February 2012 -- \textbf{Game-Insight LLC}}
-    Programmer
-    \begin {list}{\textbullet}{}
-      \item \textbf{Funzay} -- high load social network, container for flash games
-        \begin {list}{\textbullet}{}
-          \item developing some services
-          \item HTML markup 
-        \end {list} 
-      \item \textbf{Game-insight} -- official company's site
-        \begin {list}{\textbullet}{}
-          \item core developing
-          \item developing services
-        \end {list}
-    \end {list}
+    \subsubsection* {Role}
+      Junior Programmer. Programmer. Fullstack developer.
+    \subsubsection* {Projects}
+      \begin {list}{\textbullet}{}
+        \item \textbf{Funzay} -- high load social network, container for flash games
+          \begin {list}{$\circ$}{}
+            \item developing some services
+            \item HTML markup 
+          \end {list} 
+        \item \textbf{Game-insight} -- official company's site
+          \begin {list}{$\circ$}{}
+            \item core developing
+            \item developing services
+          \end {list}
+      \end {list}
+    \subsubsection* {Technology \& infrostructure stack}
+      Gentoo Linux, PostgrSQL, Memcached, PHP, PHP-FPM, Nginx, Javascript,
+      HTML, CSS, Android
+    \subsubsection* {Development \& management tools \& services}
+      Jira, Subvrsion, Git (for Android repositories only), Eclipse, PhpStorm
+
 
   \subsection* {March 2009 - November 2010 -- \textbf{Euroinvest LLC}}
-    Programmer of IT-department
-    \begin {list}{\textbullet}{}
-      \item developing extensions for MetaStock
-      \item creating models for trading strategies
-    \end {list}
-
+    \subsubsection* {Role}
+      Programmer of IT-department
+    \subsubsection* {Goals \& achievements}
+      \begin {list}{\textbullet}{}
+        \item developing extensions for MetaStock
+        \item creating models for trading strategies
+      \end {list}
+    \subsubsection* {Technology \& infrostructure stack}
+      Windows Server 2008, Microsoft SQL Sserver C/C++, STL, Boost
+    \subsubsection* {Development \& management tools \& services}
+      Visual Studio
 
 \section* {Core skills}
-\begin {list}{\textbullet}{}
-\item Knowledge of OOP programming paradigms like SOLID
-\item Knowledge of main design patterns like Singletone, Abstract Factory, Dependency Injection and so on
-\item Practicing extreme programming development methodology, for instance TDD or BDD patterns 
-\item Knowledge of main software development workflows like Agile, Kanban
-\end{list}
+  \begin {list}{\textbullet}{}
+    \item Knowledge of OOP programming paradigms like SOLID
+    \item Knowledge of main design patterns like Singletone, Abstract Factory,
+      Dependency Injection and so on
+    \item Practicing extreme programming development methodology, for instance
+      TDD or BDD patterns 
+    \item Knowledge of main software development workflows like Agile, Kanban
+  \end{list}
 
 \section* {Management Basics}
-\begin {list}{\textbullet}{}
-\item Jira
-\item Redmine
-\end{list}
+  \begin{multicols}{2}
+    \begin {list}{\textbullet}{}
+      \item Jira
+        \columnbreak
+      \item Redmine
+    \end{list}
+  \end{multicols}
 
 
 \section* {Programming abilities}
   \begin{multicols}{3}
     \begin {list}{\textbullet}{}
       \item \textbf{Python 2.x}
-        \begin {list}{\circ}{}
+        \begin {list}{$\circ$}{}
           \item Djang
           \item Tornado
           \item Twisted
@@ -196,7 +219,7 @@
           \item unittest/unittest2
         \end{list}
       \item \textbf{Java}
-        \begin {list}{\circ}{}
+        \begin {list}{$\circ$}{}
           \item Maven
           \item Spring 4 (+ Hibernate)
           \item GWT/Ext GWT
@@ -205,7 +228,7 @@
         \end{list}
       \columnbreak
       \item \textbf{PHP 4/5.x}
-        \begin {list}{\circ}{}
+        \begin {list}{$\circ$}{}
           \item Silex
           \item Symfony 2
           \item Yii
@@ -215,7 +238,7 @@
           \item PHPUnit
         \end{list}
       \item \textbf{Javascript}
-        \begin {list}{\circ}{}
+        \begin {list}{$\circ$}{}
           \item JQuery
           \item Backbone
           \item Bootstrap
@@ -224,14 +247,14 @@
       \item \textbf{ShellScript/Bash}
       \columnbreak
       \item \textbf{SQL DBMS}
-        \begin {list}{\circ}{}
+        \begin {list}{$\circ$}{}
           \item MySQL
           \item PostgreSQL
           \item SQLite
           \item H2
         \end{list}
       \item \textbf{NOSQL}
-        \begin {list}{\circ}{}
+        \begin {list}{$\circ$}{}
           \item MongoDB
           \item Cassandra
           \item CoachDB
@@ -239,7 +262,7 @@
           \item Elastic
         \end{list}
       \item \textbf{Queues}
-        \begin {list}{\circ}{}
+        \begin {list}{$\circ$}{}
           \item ZeroMQ
           \item RabbitMQ
         \end{list}
@@ -264,5 +287,5 @@
 \textbf{Phone}\hspace{\stretch{100}}\textbf{\href{tel:+7(915)032-59-23}{+7(915)032-59-23}}\newline
 \textbf{Skype}\hspace{\stretch{100}}\textbf{\href{skype:g\_a\_sokolik?call}{g\_a\_sokolik}}\newline
 \textbf{GitHub}\hspace{\stretch{100}}\textbf{\href{https://github.com/GSokol}{GSokol}}\newline
-\textbf{City}\hspace{\stretch{100}}\textbf{Moscow}\newline
+\textbf{City}\hspace{\stretch{100}}\textbf{Moscow}
 \end{document}
