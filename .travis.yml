@@ -5,6 +5,7 @@ addons:
     packages:
     - texlive-full
 install:
+- cd $TRAVIS_BUILD_DIR && mkdir ./out
 - cd $TRAVIS_BUILD_DIR && pdflatex -output-directory=out cv.tex
 script: bash ./travis/deploy.sh
 env:
