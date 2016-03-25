@@ -8,6 +8,11 @@ install:
 - cd $TRAVIS_BUILD_DIR && mkdir ./out
 - cd $TRAVIS_BUILD_DIR && pdflatex -output-directory=out cv.tex
 script: bash ./travis/deploy.sh
+cache:
+  apt: true
+  directories:
+  - $HOME/.composer
+
 env:
   global:
   - GH_REF: github.com/GSokol/cv.git
