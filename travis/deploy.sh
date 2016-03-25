@@ -2,6 +2,7 @@
 set -e
 
 cd out
+echo '<!DOCTYPE html><html><head><title>Grigorii Sokolik CV</title></head><body style="padding:0px;margin:0px;"><embed src="cv.pdf" style="hidth:100%;width:100%" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html"><script type="text/javascript">document.body.children[0].style.height=(window.innerHeight-4).toString()+"px";</script></body></html>' > index.html
 git init
 
 git config user.name "Travis CI"
