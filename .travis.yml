@@ -1,0 +1,13 @@
+sudo: required
+dist: trusty
+addons:
+  apt:
+    packages:
+    - texlive-full
+install:
+- cd $TRAVIS_BUILD_DIR && pdflatex -output-directory=out cv.tex
+script: bash ./travis/deploy.sh
+env:
+  global:
+  - GH_REF: github.com/GSokol/cv.git
+  - secure: lPsgr7Yr7Go66RIbcTcTJkEbNdxaEJ2QSG1MZiQO3C53J6ctfaNTjY33+5BfoJpQCkyy7A6ezbiJ97VqFwnb1qIVkmPdcZo6uwUYl3/eAZiRINrbmpXAJXHkytv05m068fKD+chGN+I26rGQ+b3WagdJQwgFDdCfGbKOqc4Ca+R/ib09DM0GfdXyfv0t/oMOsVo6ErfykP+vslENtNQUEGKeeI2lMSEeNeDaIW4hG8cCLnaHuoq+Va3P8DPkv/WXVvpl0bTS5kj8tk0scFuhwalk8qRzS2MCL5W0OAsiAixdKb50BESlcBDdyFpAT1V5aNeuTGJB4tUl1KRIl1tqwAyxeG6dtD5y/7ubvUpikkMYTn70YmI6lkJyIY3jxgJCGR2oBALbbPQWCedM/+vlALgwjK6EJnPDQIW6E8LUlXg6A0UgzIT3LADUY/2n8rbdxv3Fiys8dTNau6il7qj/V5aYl+kYcLHsXloLVCMGsou1z4kWyf46muyW2n0GqU/lK6ogRHBvAvrlj2/5+bvoX92tifKtR26x5Z3Gi7WAv50uT5mloYhhojEDUucqi7AMwCkE/v2E3Mmb5TCP/2JvWVIf2c/qE/s1uPtuNO3Bsyhytr6hQh9ajURBjEzilpoIQImr6ttTjEOaRjym5KG8hPuMQvEjUSJp+Ingq6wS288=
