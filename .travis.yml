@@ -10,8 +10,6 @@ install:
 script: bash ./travis/deploy.sh
 cache:
   apt: true
-  directories:
-  - $HOME/.composer
 
 env:
   global:
