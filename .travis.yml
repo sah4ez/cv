@@ -6,7 +6,7 @@ addons:
     - texlive-full
 install:
 - cd $TRAVIS_BUILD_DIR && mkdir ./out
-- cd $TRAVIS_BUILD_DIR && echo "35a36\n> \\date {$(date +"%d %B %Y")}" #> date.patch && patch cv.tex date.patch && rm date.patch
+- cd $TRAVIS_BUILD_DIR && printf "35a36\n> \\date {$(date +"%d %B %Y")}\n" #> date.patch && patch cv.tex date.patch && rm date.patch
 - cd $TRAVIS_BUILD_DIR && pdflatex -output-directory=out cv.tex
 script: bash ./travis/deploy.sh
 cache:
